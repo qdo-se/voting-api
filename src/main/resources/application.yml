@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:file:voting.db
+    #    url: jdbc:postgresql://localhost:5432/voting
+    #    username: postgres
+    #    password: password
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: com.qdo.votingapi.configurations.SQLiteDialect
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG

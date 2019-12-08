@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:file:test.db?mode=memory&cache=shared
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: com.qdo.votingapi.configurations.SQLiteDialect
