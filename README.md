@@ -56,7 +56,7 @@ Also, it may require exponential backoff and retry handler to retry the call in 
     
     * Each vote is a record to avoid mutation
   
-Note: Database can lock at table level if there are multiple transactions accessing the same table, 
+> Note: Database can lock at table level if there are multiple transactions accessing the same table, 
 it's better to handle concurrency at application level using Java synchronization.
 
 ### Things I learned
