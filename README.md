@@ -83,3 +83,24 @@ it's better to handle concurrency at application level using Java synchronizatio
 - Pagination with limit and offset
 - Batch votes
 - Containerize with Postgres
+
+### Compile and run
+
+This project is written with Java 14 so Java 14 should be installed 
+
+```
+mvn clean compile package
+java -jar ./target/voting-api-0.0.1-SNAPSHOT.jar
+```
+
+### Switch Java version
+
+For MacOS
+
+```
+# Check which Java versions are available
+/usr/libexec/java_home -V
+
+# Switch Java version
+export JAVA_HOME=$(/usr/libexec/java_home -v 14*)
+```
