@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @ApiModel(description = "Person")
 public class Person {
-    @ApiModelProperty(notes = "Person's id")
+    @ApiModelProperty(notes = "Person's id", hidden = true)
     private final UUID id;
 
     @ApiModelProperty(notes = "Person's name is stored as lower case")

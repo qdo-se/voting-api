@@ -4,8 +4,7 @@
 - Visual Studio Code (for editing Markdown)
 - Spring Boot 2.2.2
 - Maven
-- Java 13
-- JDK 13.0.1
+- Java & JDK 14
 - Junit 5
 
 ### Developer

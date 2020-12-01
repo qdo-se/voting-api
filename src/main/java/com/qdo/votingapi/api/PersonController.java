@@ -6,6 +6,7 @@ import com.qdo.votingapi.responses.CustomApiErrorResponse;
 import com.qdo.votingapi.responses.CustomApiSuccessResponse;
 import com.qdo.votingapi.services.PersonService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,7 @@
 package com.qdo.votingapi.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -8,12 +9,15 @@ import java.util.UUID;
 
 public class Vote {
     @NotBlank(message = "name is mandatory")
+    @ApiModelProperty(notes = "Person's name")
     private final String name;
 
     @NotNull
+    @ApiModelProperty(notes = "Question's id")
     private final UUID questionId;
 
     @NotNull
+    @ApiModelProperty(notes = "Person's answer for the question")
     private final boolean answer;
 
     /**
