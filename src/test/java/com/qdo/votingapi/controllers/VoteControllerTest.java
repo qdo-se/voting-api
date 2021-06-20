@@ -94,11 +94,11 @@ public class VoteControllerTest {
     public void addVoteNewPerson() throws Exception {
         // Confirm there is no stranger
         Optional<Person> stranger = personDao.findPersonByName("Stranger");
-        Person person = personDao.findAllPeople().get(0); // get first person
+        Assertions.assertTrue(stranger.isEmpty());
 
         // A stranger votes for a question
+        Person person = new Person(null, "Stranger");
         Question question = questionDao.findAllQuestions().get(0); // get first question
-        person = new Person(null, "Stranger");
 
         // Auto creating an account for him
         postVote(person, question, status().isOk());
@@ -146,6 +146,7 @@ public class VoteControllerTest {
                                     startSignal.await();
 
                                     if (runningCount.get() > 0) {
+//                                        System.err.println("Running count: " + runningCount.get());
                                         overlapCount.incrementAndGet();
                                     }
 
